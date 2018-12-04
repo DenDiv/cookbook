@@ -1,0 +1,52 @@
+
+<html>
+<style>
+   @import url("https://fonts.googleapis.com/css?family=Lobster");
+   @import url("https://fonts.googleapis.com/css?family=Black+Han+Sans");
+   a:link { color: #2272ae;  text-decoration: none;}
+   a:visited { color: #2272ae;  text-decoration: none; }
+   a:hover { text-decoration: underline; }
+   a:active { color: blue; }
+   <!-- type="text/css">
+	#wrap {
+     width:1000px;
+     margin:0 auto;
+	}
+	#left_col {
+	 line-height: 0.5; text-align:center;
+	 font-size: 180%; font-color: black;
+     float:left;
+     width:650px;
+	}
+	#right_col {
+	 line-height: 0.5; text-align:center;
+	 font-size: 180%; font-color: black;
+     float:right;
+     width:650px;
+	}
+</style>
+
+ <body style = "background-color:#FFFFFF ">
+
+      <form action = "http://localhost:5000/ingredients" method = "POST">
+      	 <p style="color:#FFFFFF; font-size:500%; background-color:#000000; text-align:center; line-height: 90px; height: 100px; letter-spacing: 4px; font-family: Lobster, serif; " > CookBook </p>
+
+
+<p style="text-align: center;">
+  	<a style="font-size: 150%; line-height: 5px; height: 5px; text-align: center;  color: black; " href=
+  	"http://127.0.0.1:5000/"> Вернуться на главную страницу </a>
+    </p>
+    <p style="text-align:center; font-size: 280%; line-height: 5px; height: 5px;"> Ингридиенты для <i> {{name}} </i>: </p>
+    <br/>
+	{% for ingr in ingredients %}
+	<p style="text-align:center; font-size: 140%; line-height: 10px">
+		{{ingr}}
+	</p>
+	{% endfor %}
+
+
+
+ </body>
+
+
+</html>
